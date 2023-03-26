@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* text */
+    --Softblue: hsl(215, 51%, 70%);
+    /* value text */
+    --Cyan: hsl(178, 100%, 50%);
+    /* (card BG) */
+    --cardbg:hsl(216, 50%, 16%);
+    /* (main BG) */
+    --mainbg: hsl(217, 54%, 11%);
+    /* text */
+    --text: hsl(0, 0%, 100%);
+    /* (line) */
+    --line: hsl(215, 32%, 65%);
+}
+body{
+    background-color: var(--mainbg);
+    font-family: 'outfit', sans-serif;
+    font-size:18px;
+    
+}
+
+.main{
+    height: 100vh;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.container{
+    background-color: var(--cardbg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 12px;
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0px 40px 6px rgba(0, 0, 0, 0.7)
+}
+
+
+.img-container .main-image{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    
+}
+
+.img-container{
+    position: relative;
+    border-radius: 12px;
+    
+}
+ .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-radius: 12px;
+    background-color: hsl(178, 100%, 50%); 
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+ }
+
+ .view {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+    
+ }
+
+ .overlay:hover { 
+    display: block;
+    cursor: pointer;
+    opacity: 0.5;
+ }
+
+.text h3, a{
+    margin-top: 20px;
+    color:var(--text);
+    font-weight: 600;
+    text-decoration: none;
+}
+.text p{
+    color: var(--Softblue);
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.account-info ul :nth-child(1) {
+    color: var(--Cyan);
+}
+
+.account-info ul :nth-child(2) {
+    color: var(--Softblue);
+}
+
+.account-info ul{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.account-info ul li{
+    display: flex;
+    align-items: center;
+}
+
+.account-info img{
+    margin-right: 12px;
+}
+
+.hr-rule{
+    border-bottom:  1px solid var(--Softblue);
+    margin: 20px 0;
+}
+
+.profile img {
+    width: 40px;
+    margin-right: 20px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+
+.profile{
+    display: flex;
+    align-content:flex-start;
+    align-items: center;
+
+}
+.profile p{
+    color: var(--Softblue);
+}
+.profile a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ a:hover{
+    color:var(--Cyan);
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center; 
+    color: #fff;
+    margin: 20px auto;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+.attribution a:hover{
+    color: var(--Cyan);
+}
+@media(max-width: 500px){
+    .container{
+    width: 370px;
+    margin: auto;
+    }
+}
